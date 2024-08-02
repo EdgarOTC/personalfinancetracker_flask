@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persons</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Persons</h1>
+    <a href="{{url_for('home')}}">Home</a><br>
+    <a href="{{url_for('new_person')}}">New person</a>
+    <table>
+        <hr>
+        <td>ID</td><td>NAME</td><td>&nbsp;</td><td>&nbsp;</td>
+        </hr>        
+        {% for person in persons %}
+        <tr>
+            <td><p>{{ person.id }}</p></td>
+            <td><p>{{ person.name }}</p></td>
+            <td><a href="{{url_for('update_person', id=person.id)}}">Update</a></td>
+            <td><a href="{{url_for('delete_person', id=person.id)}}">Delete</a></td>
+        </tr>
+        {% endfor %}        
+    </table>
+</body>
+</html>

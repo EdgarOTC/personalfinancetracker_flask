@@ -1,0 +1,30 @@
+*.pyc
+build/
+dist/
+htmlcov/
+MANIFEST
+.*.swp
+*.egg-info
+.idea/
+coverage.xml
+docs/_build
+.coverage*
+.python-version
+.tox
+.venv/
+venv/
+.env
+.pytest_cache
+**/virt_env/
+#### VS CODE IGNORE ####
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix

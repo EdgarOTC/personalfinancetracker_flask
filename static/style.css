@@ -1,0 +1,32 @@
+body {
+    background-color:black
+  }
+  h1 {
+    color:crimson;
+    text-align: center;
+    font-size:xx-large; 
+  }
+  p {
+    color:crimson
+  }
+  table {
+    display: table;
+    text-align:left;
+    align-items:center;
+    width: 80%;
+    height: 100%;
+    table-layout: auto;
+    margin: auto;
+    display: table;
+    border: black;        
+}
+:any-link{
+    color: blue;
+    font-size:larger;
+}
+label{
+    color: crimson;
+}
+td{
+    color: crimson;
+}

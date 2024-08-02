@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Transaction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Delete transaction</h1>
+    <a href="{{url_for('home')}}">Back to home</a>
+    <hr>
+    <form method="POST">
+        <label for="id">Transaction id</label><br>
+        <input type="text" name="id" id="id" value="{{transaction.id}}" disabled><br>        
+        <label for="description">Transaction description</label><br>
+        <input type="text" name="description" id="description" value="{{transaction.description}}" disabled><br>
+        <label for="date">Transaction date</label><br>
+        <input type="text" name="date" id="date" value="{{transaction.date|date_format}}" disabled><br>        
+        <label for="amount">Transaction amount</label><br>
+        <input type="number" name="amount" id="amount" value="{{transaction.amount}}" disabled><br>
+        <label for="category">Transaction category</label><br>
+        <input type="text" name="category" value="{{categories|get_item(transaction.category)}}" disabled><br>    
+        <label for="person">Transaction person</label><br>
+        <input type="text" name="person" value="{{persons|get_item(transaction.person)}}" disabled><br>   
+        <button type="submit">Delete</button>
+    </form>    
+</body>
+</html>

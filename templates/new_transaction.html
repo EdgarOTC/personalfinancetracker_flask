@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Transaction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>New transaction</h1>
+    <a href="{{url_for('home')}}">Back to home</a>
+    <hr>
+    <form method="POST">
+        <label for="description">Transaction description</label><br>
+        <input type="text" name="description" id="description"><br>
+        <label for="date">Transaction date</label><br>
+        <input type="date" name="date" id="date"><br>
+        <label for="amount">Transaction amount</label><br>
+        <input type="number" name="amount" id="amount" step=".01"><br>
+        <label for="category">Transaction category</label><br>
+        <input list="categories" name="category">
+        <datalist id="categories">
+            {% for category in categories %}
+                <option value="{{category.id}}-{{category.name}}">
+            {% endfor %}
+        </datalist><br>
+        <label for="person">Transaction person</label><br>
+        <input list="persons" name="person">
+        <datalist id="persons">
+            {% for person in persons %}
+                <option value="{{person.id}}-{{person.name}}">
+            {% endfor %}
+        </datalist><br>
+        <button type="submit">Add</button>
+    </form>    
+</body>
+</html>

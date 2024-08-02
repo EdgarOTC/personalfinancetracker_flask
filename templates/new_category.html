@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New category</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>New category</h1>
+    <a href="{{url_for('home')}}">Back to home</a>
+    <hr>
+    <form method="POST">
+        <label for="name">Category name</label><br>
+        <input type="text" name="name" id="name"><br>
+        <label for="name">Category type</label><br>
+        <input type="radio" name="type" id="income" value="Income"><label for="income">Income</label> &nbsp; <input type="radio" name="type" id="expense" value="Expense"><label for="expense">Expense</label><br>
+        <button type="submit">Add</button>
+    </form>    
+</body>
+</html>

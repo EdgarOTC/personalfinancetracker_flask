@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Category</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Update Category</h1>
+    <a href="{{url_for('home')}}">Back to home</a>
+    <hr>
+    <form method="POST">
+        <label for="name">Category id</label><br>
+        <input type="text" name="id" id="{{category.id}}" value="{{category.id}}" disabled><br>        
+        <label for="name">Category name</label><br>
+        <input type="text" name="name" id="{{category.name}}" value="{{category.name}}"><br>  
+        <label for="name">Category type</label><br>
+        <input type="text" name="name" id="{{category.type}}" value="{{category.type}}" disabled><br>
+        <button type="submit">Update</button>
+    </form>    
+</body>
+</html>

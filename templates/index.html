@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL FINANCE TRACKER</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>PERSONAL FINANCE TRACKER</h1>
+    <a href="{{url_for('persons')}}">Persons List</a><br>
+    <a href="{{url_for('new_person')}}">New person</a><br>  
+    <a href="{{url_for('categories')}}">Categories List</a><br>
+    <a href="{{url_for('new_category')}}">New Category</a><br>
+    <a href="{{url_for('transactions')}}">Transactions List</a><br>
+    <a href="{{url_for('new_transaction')}}">New Transaction</a><br>
+    <a href="{{url_for('reports')}}">Reports</a><br>
+</body>
+</html>

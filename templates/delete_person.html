@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Person</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Delete Person</h1>
+    <a href="{{url_for('home')}}">Back to home</a>
+    <hr>
+    <form method="POST">
+        <label for="name">Person id</label><br>
+        <input type="text" name="id" id="{{person.id}}" value="{{person.id}}" disabled><br>        
+        <label for="name">Person name</label><br>
+        <input type="text" name="name" id="{{person.name}}" value="{{person.name}}" disabled><br>        
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

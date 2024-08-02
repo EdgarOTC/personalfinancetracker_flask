@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Transactions</h1>
+    <a href="{{url_for('home')}}">Home</a><br>
+    <a href="{{url_for('new_transaction')}}">New transaction</a>
+    <table>
+        <hr>
+        <td>ID</td><td>DESCRIPTION</td><td>DATE</td><td>AMOUNT<td>CATEGORY</td><td>PERSON</td><td>&nbsp;</td><td>&nbsp;</td>
+        </hr>        
+        {% for transaction in transactions %}
+        <tr>
+            <td><p>{{ transaction.id }}</p></td>
+            <td><p>{{ transaction.description }}</p></td>
+            <td><p>{{ transaction.date|date_format('%m-%d-%Y') }}</p></td>
+            <td><p>{{ transaction.amount }}</p></td>
+            <td><p>{{ categories|get_item(transaction.category) }}</p></td>
+            <td><p>{{ persons|get_item(transaction.person) }}</p></td>
+            <td><a href="{{url_for('update_transaction', id=transaction.id)}}">Update</a></td>
+            <td><a href="{{url_for('delete_transaction', id=transaction.id)}}">Delete</a></td>
+        </tr>
+        {% endfor %}        
+    </table>
+</body>
+</html>
